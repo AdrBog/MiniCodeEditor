@@ -1,0 +1,48 @@
+@media (pointer:none), (pointer:coarse) {
+    article{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+body {
+    margin: 40px auto;
+    max-width: 1000px;
+    font-size: 18px;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+footer{
+    text-align: center;
+}
+section{
+    margin: 10px auto 10px 0;
+}
+.mini-code-editor{
+    width: 100% !important;
+    height: 300px !important;
+}
+.mini-code-editor-text{
+    font-size: 24px !important;
+}
+
+.sample-code .mini-code-editor-text{
+    font-size: 18px !important;
+}
+
+.sample-code .mini-code-editor{
+    height: 128px !important;
+}
+
+article{
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin: 20px 0;
+}
+article div{
+    flex-grow: 1;
+}
+img{
+    width: 100%;
+}

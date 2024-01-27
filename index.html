@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mini Code Editor</title>
+</head>
+<body>
+    <header>
+        <h1>Mini Code Editor</h1>
+        <p>Simple code editor for your web applications</p>
+    </header>
+    <main>
+        <section class="code-editor">// Code something</section>
+        <section>
+            <label for="highlight-rules">Set rules:</label>
+            <select name="highlight-rules" id="highlight-rules" onchange="changeRules(this.value)">
+                <option value="Javascript">Javascript</option>
+                <option value="HTML">HTML</option>
+                <option value="SQLite">SQLite</option>
+            </select>
+            <label for="word-wrap">Word Wrap:</label>
+            <input type="checkbox" name="word-wrap" id="word-wrap" onchange="CODE_EDITOR.setWordWrap(this.checked)">
+        </section>
+        <hr>
+        <section>
+            <article>
+                <div>
+                    <h1>Easy to create</h1>
+                    <p>
+                        Create the code editor is done in a few lines of code.
+                    </p>
+                </div>
+                <div>
+                    <div id="editor" class="sample-code"></div>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h1>Easy to configure</h1>
+                    <p>
+                        Configure your text editor in no time.
+                    </p>
+                    <p>
+                        Here you have all the possible options: setReadOnly(), setWordWrap(), setValue(), appendValue(), getValue() and setRules()
+                    </p>
+                </div>
+                <div>
+                    <div id="editor2" class="sample-code"></div>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <h1>Code fast</h1>
+                    <p>
+                        Write the keyword and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to instantly generate the code block.
+                    </p>
+                    <p>
+                        Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
+                    </p>
+                </div>
+                <div>
+                    <img src="res/1.gif">
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <a href="https://github.com/AdrBog/MiniCodeEditor" target="_blank">{} source code</a>
+            <a href="https://ko-fi.com/adrbog">Donate</a>
+        </p>
+        <p>By <a href="https://github.com/AdrBog" target="_blank">Adrian Bogdan</a> © 2024 </p>
+        <p>Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License, version 3</a></p>
+    </footer>
+
+    <script src="src/editor.js"></script>
+    <script src="languages/js.js"></script>
+    <script src="languages/html.js"></script>
+    <script src="languages/sqlite.js"></script>
+    <script>
+        function setup(){
+            const x = new MiniCodeEditor("#editor")
+            x.setRules(HTML_RULES)
+            x.setWordWrap(true)
+            x.setReadOnly(true)
+            x.setValue("<div id='editor'></div>\n")
+            x.appendValue("<script src='src/editor.js'></scr" + "ipt>\n")
+            x.appendValue("<script src='languages/html.js'></scr" + "ipt>\n")
+            x.appendValue("<script>\n\tconst EDITOR = new MiniCodeEditor('#editor')\n")
+            x.appendValue("\tEDITOR.setRules(HTML_RULES)\n")
+            x.appendValue("</sc" + "ript>")
+        }
+
+        function setup2(){
+            const x = new MiniCodeEditor("#editor2")
+            x.setRules(JS_RULES)
+            x.setWordWrap(true)
+            x.setReadOnly(true)
+            x.setValue("EDITOR.setRules(HTML_RULES)\nEDITOR.setWordWrap(false)\nEDITOR.setReadOnly(true)\nEDITOR.setValue('Hello world')")
+        }
+
+        const CODE_EDITOR = new MiniCodeEditor(".code-editor")
+        function changeRules(rules){
+            switch (rules) {
+                case "HTML":
+                    CODE_EDITOR.setRules(HTML_RULES)
+                    break;
+                case "Javascript":
+                    CODE_EDITOR.setRules(JS_RULES)
+                    break;
+                case "SQLite":
+                    CODE_EDITOR.setRules(SQLITE_RULES)
+                    break;
+                default:
+                    break;
+            }
+        }
+        changeRules(document.querySelector("select").value)
+        CODE_EDITOR.setWordWrap(this.checked)
+
+        setup()
+        setup2()
+    </script>
+</body>
+</html>
