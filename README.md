@@ -2,7 +2,7 @@
 
 Simple code editor for your web applications
 
-
+<a href="https://adrbog.github.io/MiniCodeEditor/" target="_blank">Demo</a>
 
 ## Easy to create
 
