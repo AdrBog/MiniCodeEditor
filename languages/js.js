@@ -18,11 +18,11 @@ const JS_RULES = {
         },
         {   // Text between quotation marks
             "regex": /("(.*?)"|'(.*?)')/gm,
-            "replaceTo": "<SPAN CLASS='mini-code-editor-brown'>$&</SPAN>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
         },
         {   // Comments
             "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/,
-            "replaceTo": "<SPAN CLASS='mini-code-editor-green'>$&</SPAN>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {   // Every type of number
             // https://stackoverflow.com/questions/2811031/decimal-or-numeric-values-in-regular-expression-validation
@@ -38,11 +38,15 @@ const JS_RULES = {
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
+            "regex": /\b(async|await|then)\b/g,
+            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+        },
+        {
             "regex": /\b(try|catch|throw|finally)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(class|this|constructor)\b/g,
+            "regex": /\b(class|this|constructor|extends|super|static)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
@@ -78,14 +82,64 @@ const JS_RULES = {
     "newline_pairs": ["()", "{}", "[]","``"],
     "shortcuts":[
         {
-            "keyword": "for",
-            "left": "for (int i = 0; i <= 10; i++)\n{\n\t",
-            "right": "\n}"
+            "keyword": "afun",
+            "left": "async function ",
+            "right": "()\n{\n\t\n}"
+        },
+        {
+            "keyword": "ca",
+            "left": "case ",
+            "right": ":\n\t\n\tbreak;"
         },
         {
             "keyword": "cl",
             "left": "console.log(\"",
             "right": "\")"
-        }
+        },
+        {
+            "keyword": "cls",
+            "left": "class ",
+            "right": "\n{\n\t\n}"
+        },
+        {
+            "keyword": "con",
+            "left": "constructor()\n{\n\t",
+            "right": "\n}"
+        },
+        {
+            "keyword": "if",
+            "left": "if (",
+            "right": ") {\n\t\n}"
+        },
+        {
+            "keyword": "ife",
+            "left": "if (",
+            "right": ") {\n\t\n} else {\n\t\n}"
+        },
+        {
+            "keyword": "ifel",
+            "left": "if (",
+            "right": ") {\n\t\n} else if () {\n\t\n} else {\n\t\n}"
+        },
+        {
+            "keyword": "for",
+            "left": "for (int i = 0; i <= 10; i++)\n{\n\t",
+            "right": "\n}"
+        },
+        {
+            "keyword": "fun",
+            "left": "function ",
+            "right": "()\n{\n\t\n}"
+        },
+        {
+            "keyword": "getid",
+            "left": "document.getElementById(\"",
+            "right": "\")"
+        },
+        {
+            "keyword": "sw",
+            "left": "switch (",
+            "right": ") {\n\tcase 1:\n\t\tbreak;\n\tdefault:\n\t\t\n}"
+        },
     ]
 }

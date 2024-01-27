@@ -30,7 +30,7 @@ const HTML_RULES = {
             "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         */
-        {   // Tags
+        {   // Tags attributes
             "regex": /(\w*) *&equals; *((['"])?((\\\3|[^\3])*?)\3|(\w+))/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
@@ -56,9 +56,14 @@ const HTML_RULES = {
     "newline_pairs": ["()", "{}", "[]","``","><"],
     "shortcuts": [
         {
-            "keyword": "html",
-            "left": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Document</title>\n\t</head>\n\t<body>\n\t\t",
-            "right": "\n\t</body>\n</html>"
+            "keyword": "a",
+            "left": "<a href=\"",
+            "right": "\"></a>"
+        },
+        {
+            "keyword": "dialog",
+            "left": "<dialog id=\"dialog\">\n\t",
+            "right": "\n\t<button onclick=\"dialog.close()\">Close</button>\n</dialog>"
         },
         {
             "keyword": "form",
@@ -66,9 +71,54 @@ const HTML_RULES = {
             "right": "\n</form>"
         },
         {
-            "keyword": "dialog",
-            "left": "<dialog id=\"dialog\">\n\t",
-            "right": "\n\t<button onclick=\"dialog.close()\">Close</button>\n</dialog>"
+            "keyword": "html",
+            "left": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Document</title>\n\t</head>\n\t<body>\n\t\t",
+            "right": "\n\t</body>\n</html>"
+        },
+        {
+            "keyword": "if",
+            "left": "<iframe src=\"",
+            "right": "\">"
+        },
+        {
+            "keyword": "img",
+            "left": "<img src=\"",
+            "right": "\" alt=\"\">"
+        },
+        {
+            "keyword": "in",
+            "left": "<input type=\"text\" name=\"",
+            "right": "\">"
+        },
+        {
+            "keyword": "ine",
+            "left": "<input type=\"email\" name=\"",
+            "right": "\">"
+        },
+        {
+            "keyword": "inp",
+            "left": "<input type=\"password\" name=\"",
+            "right": "\">"
+        },
+        {
+            "keyword": "label",
+            "left": "<label for=\"",
+            "right": "\"></label>"
+        },
+        {
+            "keyword": "p",
+            "left": "<p>\n\t",
+            "right": "\n</p>"
+        },
+        {
+            "keyword": "script",
+            "left": "<script>\n\t",
+            "right": "\n</script>"
+        },
+        {
+            "keyword": "style",
+            "left": "<style>\n\t",
+            "right": "\n</style>"
         }
     ]
 }

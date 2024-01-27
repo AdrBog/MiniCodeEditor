@@ -70,6 +70,13 @@ class MiniCodeEditor{
         .mini-code-editor-purple{color: purple;}
         .mini-code-editor-brown{color: brown;}
 
+        .mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: blue !important;}
+        .mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red !important;}
+        .mini-code-editor-green-imp, .mini-code-editor-green-imp *{color: green !important;}
+        .mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange !important;}
+        .mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: purple !important;}
+        .mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: brown !important;}
+
         *{
             box-sizing: border-box;
         }
@@ -192,7 +199,7 @@ class MiniCodeEditor{
                 }
             } else if (e.key === 'F1'){
                 e.preventDefault()
-                alert(`List of shortcuts:\n${this.#RULES["shortcuts"].map((x) => x["keyword"]).join("\t")}`)
+                alert(`List of shortcuts:\n${this.#RULES["shortcuts"].map((x) => x["keyword"]).join(", ")}`)
             }
             this.#handleInput()
         })

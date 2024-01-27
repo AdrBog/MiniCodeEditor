@@ -1,8 +1,8 @@
 # Mini Code Editor
 
-Simple code editor for your web applications
-
 <a href="https://adrbog.github.io/MiniCodeEditor/" target="_blank">Demo</a>
+
+## (EN) Simple code editor for your web applications
 
 ## Easy to create
 
@@ -52,7 +52,61 @@ Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
 
 In this world there are a lot of programming languages, and I can't configure Mini Code Editor for each of them.
 
-If you are interested in contributing to the project, read **CONTRIBUTING** to see how to create or edit programming languages in Mini Code Editor.
+If you are interested in contributing to the project, read **CONTRIBUTING.md** to see how to create or edit programming languages in Mini Code Editor.
+
+<hr>
+
+## (ES) Editor de codigo sencillo para tus aplicaciones web
+
+## Facil de crear
+
+Crear el editor de código se hace en unas pocas líneas de código.
+
+```html
+<div id='editor'></div>
+
+<!-- Importa el editor -->
+<script src='src/editor.js'></script>
+
+<!-- Importa el lenguaje -->
+<script src='languages/html.js'></script>
+
+
+<script>
+	const EDITOR = new MiniCodeEditor('#editor')
+	EDITOR.setRules(HTML_RULES)
+</script>
+```
+
+
+## Facil de configurar
+
+Configura tu editor de texto en un abrir y cerrar de ojos.
+
+Aquí tienes todas las opciones posibles: setReadOnly(), setWordWrap(), setValue(), appendValue(), getValue() and setRules()
+
+```js
+EDITOR.setRules(HTML_RULES)
+EDITOR.setWordWrap(false)
+EDITOR.setReadOnly(true)
+EDITOR.setValue('Hola mundo')
+```
+
+## Programe rapido
+
+Escriba la palabra clave y pulse <kbd>Ctrl</kbd> + <kbd>Space</kbd> para generar instantáneamente el bloque de código.
+
+
+Pulsa <kbd>F1</kbd> dentro del editor de código para ver una lista de las palabras clave actuales
+
+
+<img width="500px" src="res/1.gif">
+
+## Se necesita ayuda!
+
+En este mundo hay muchos lenguajes de programación, y no puedo configurar Mini Code Editor para cada uno de ellos.
+
+Si está interesado en contribuir al proyecto, lea **CONTRIBUTING.md** (aviso: está en ingles) para ver cómo crear o editar lenguajes de programación en el Mini Code Editor.
 
 ## License
 

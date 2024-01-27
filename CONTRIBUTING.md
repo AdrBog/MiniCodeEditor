@@ -19,7 +19,7 @@ The way Mini Code Editor highlights the code of a certain color is based on the 
 
 Using regular expressions, the string is replaced by HTML tags applying the color effect
 
-```json
+```js
 // Regex to paint HTML comments in green
 {
     "regex": /&lt;!--[^>]*--&gt;/gm,
@@ -35,6 +35,13 @@ List of available colors:
 .mini-code-editor-orange{color: orange;}
 .mini-code-editor-purple{color: purple;}
 .mini-code-editor-brown{color: brown;}
+
+.mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: blue !important;}
+.mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red !important;}
+.mini-code-editor-green-imp, .mini-code-editor-green-imp *{color: green !important;}
+.mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange !important;}
+.mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: purple !important;}
+.mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: brown !important;}
 ```
 
 ### IMPORTANT !!!!!!!!!!!
