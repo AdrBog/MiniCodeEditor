@@ -40,8 +40,10 @@ class MiniCodeEditor{
         this.#codeEditor = document.querySelector(selector)
         this.#DEFAULT_TEXT = this.#codeEditor.innerHTML
 
+        if (!document.querySelector(".mini-code-editor")){
+            this.#styleCodeEditor()
+        }
         this.#generateCodeEditor()
-        this.#styleCodeEditor()
         this.#addEventsListeners()
         this.setValue(this.#DEFAULT_TEXT)
     }
