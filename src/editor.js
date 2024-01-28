@@ -150,7 +150,11 @@ class MiniCodeEditor{
                 return
             }
 
-            let textarea = this.#codeEditorTextarea;
+            const textarea = this.#codeEditorTextarea
+            const charPairsList = this.#RULES["character_pairs"]
+            const charLeft = this.#getTextareaCharacter(textarea, -1, 1)
+            const charRight = this.#getTextareaCharacter(textarea, 0, 1)
+            const charPair = this.#getTextareaCharacter(textarea, -1, 2)
 
             if (!["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown"].includes(e.key)){
                 this.#saveHistory()
@@ -161,29 +165,27 @@ class MiniCodeEditor{
                 this.#insertText(textarea, "\t");
             } else if (e.key === "Enter") {
                 e.preventDefault();
-                if (this.#RULES["newline_pairs"].includes(this.#getTextareaCharacter(textarea, -1, 2))) {
+                if (this.#RULES["newline_pairs"].includes(charPair)) {
                     this.#insertText(textarea, "\n")
                     this.#insertText(textarea, "\n")
-                    this.#moveTextareaCursor(textarea, (this.#getTextareaLine(textarea).match(this.#TEXTAREA_TABS_REGEX)[0].length * -1) - 1)
+                    this.#moveTextareaCursor(textarea, (this.#getTabLevel(textarea)[0].length * -1) - 1)
                     this.#insertText(textarea, "\t")
                 } else {
                     this.#insertText(textarea, "\n")
                 }
-            } else if (Object.keys(this.#RULES["character_pairs"]).includes(e.key)) {
+            } else if (Object.keys(charPairsList).includes(e.key)) {
                 e.preventDefault();
-                this.#duplicateCharacter(textarea, e.key + this.#RULES["character_pairs"][e.key])
-            } else if (Object.values(this.#RULES["character_pairs"]).includes(e.key)) {
+                this.#duplicateCharacter(textarea, e.key + charPairsList[e.key])
+            } else if (Object.values(charPairsList).includes(e.key)) {
                 e.preventDefault();
-                if (Object.keys(this.#RULES["character_pairs"]).includes(this.#getTextareaCharacter(textarea, -1, 1))) {
-                    if (Object.values(this.#RULES["character_pairs"]).includes(this.#getTextareaCharacter(textarea, 0, 1))) {
-                        this.#moveTextareaCursor(textarea, 1)
-                    }
+                if (Object.keys(charPairsList).includes(charLeft) && e.key == charPairsList[charLeft] && charRight == charPairsList[charLeft]) {
+                    this.#moveTextareaCursor(textarea, 1)
                 } else {
                     this.#insertText(textarea, e.key)
                 }
             } else if (e.key === "Backspace") {
                 e.preventDefault();
-                if (this.#RULES["backspace_pairs"].includes(this.#getTextareaCharacter(textarea, -1, 2))) {
+                if (this.#RULES["backspace_pairs"].includes(charPair)) {
                     this.#removeInTextarea(textarea, 0, 1)
                 }
                 this.#removeInTextarea(textarea)
