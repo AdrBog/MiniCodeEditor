@@ -24,6 +24,10 @@ const JS_RULES = {
             "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/,
             "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
         },
+        {   // Functions
+            "regex": /([a-zA-Z_{1}][a-zA-Z0-9_]+)(?= *\()/gm,
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
+        },
         {   // Every type of number
             // https://stackoverflow.com/questions/2811031/decimal-or-numeric-values-in-regular-expression-validation
             "regex": /\b((?!-0?(\.0+)?(e|$))-?(0|[1-9]\d*)?(\.\d+)?(?<=\d)(e-?(0|[1-9]\d*))?|0x[0-9a-f]+)\b/g,

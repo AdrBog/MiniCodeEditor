@@ -19,6 +19,7 @@
             <select name="highlight-rules" id="highlight-rules" onchange="changeRules(this.value)">
                 <option value="Javascript">Javascript</option>
                 <option value="HTML">HTML</option>
+                <option value="Python">Python</option>
                 <option value="SQLite">SQLite</option>
             </select>
             <label for="word-wrap">Word Wrap:</label>
@@ -80,6 +81,7 @@
     <script src="languages/js.js"></script>
     <script src="languages/html.js"></script>
     <script src="languages/sqlite.js"></script>
+    <script src="languages/python.js"></script>
     <script>
         function setup(){
             const x = new MiniCodeEditor("#editor")
@@ -110,6 +112,9 @@
                     break;
                 case "Javascript":
                     CODE_EDITOR.setRules(JS_RULES)
+                    break;
+                case "Python":
+                    CODE_EDITOR.setRules(PYTHON_RULES)
                     break;
                 case "SQLite":
                     CODE_EDITOR.setRules(SQLITE_RULES)

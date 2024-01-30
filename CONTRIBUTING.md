@@ -65,6 +65,14 @@ To avoid unexpected effects when using the editor, it is important that these re
     "regex": "=",
     "replaceTo": "&equals;"
 },
+{
+    "regex": "\"",
+    "replaceTo": "&quot;"
+},
+{
+    "regex": "\'",
+    "replaceTo": "&apos;"
+}
 ```
 
 If you plan to use the above characters, remember for their respective HTML entities inside regular expressions
@@ -74,6 +82,16 @@ If you plan to use the above characters, remember for their respective HTML enti
 < -> &lt;
 > -> &gt;
 = -> &equals;
+" -> &quot;
+' -> &apos;
+```
+
+Also add this regex at the end of the list:
+```js
+{
+    "regex": /\n$/g,
+    "replaceTo": "\n\n"
+}
 ```
 
 Regular expressions are executed in order. And that order matters, if a regular expression is giving weird results, try changing the order in which regular expressions are executed.

@@ -1,6 +1,10 @@
 /**
-    Mini Code Editor - Simple code editor for your web applications
-    Copyright (C) 2024  Adrian Bogdan
+    ===    Mini Code Editor   ===
+          Simple code editor 
+      for your web applications
+    
+    COPYLEFT (C) 2024 Adrian Bogdan
+         ALL WRONGS RESERVED
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
