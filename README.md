@@ -48,6 +48,14 @@ Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
 
 <img width="500px" src="res/1.gif">
 
+## Supported languages
+- HTML (consequently XML)
+- Javascript
+- Python
+- SQLite
+
+More coming soon...
+
 ## Help wanted!
 
 In this world there are a lot of programming languages, and I can't configure Mini Code Editor for each of them.
@@ -102,6 +110,14 @@ Pulsa <kbd>F1</kbd> dentro del editor de código para ver una lista de las palab
 
 <img width="500px" src="res/1.gif">
 
+## Lenguajes soportados
+- HTML (en consecuencia XML)
+- Javascript
+- Python
+- SQLite
+
+Próximamente más...
+
 ## Se necesita ayuda!
 
 En este mundo hay muchos lenguajes de programación, y no puedo configurar Mini Code Editor para cada uno de ellos.
@@ -114,7 +130,8 @@ Mini Code Editor
 
 Simple code editor for your web applications
 
-Copyright (C) 2024 Adrian Bogdan
+Copyleft (C) 2024 Adrian Bogdan <br>
+All wrongs reserved
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
