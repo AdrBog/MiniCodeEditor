@@ -5,11 +5,17 @@
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eee;
+    color: #444;
     margin: 40px auto;
     max-width: 1000px;
     font-size: 18px;
     padding: 0 10px;
     line-height: 1.4;
+}
+nav a{
+    padding: 8px;
 }
 footer{
     text-align: center;

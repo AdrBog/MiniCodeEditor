@@ -1,13 +1,8 @@
 /**
-    ===    Mini Code Editor   ===
-          Simple code editor 
-      for your web applications
-    
-    COPYLEFT (C) 2024 Adrian Bogdan
-         ALL WRONGS RESERVED
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>
+    Mini Code Editor - Simple code editor or your web applications
+    Copyleft (Ↄ) 2024 Adrian Bogdan. All wrongs reserved.
+    License: GPL v3.0
+    Github: https://github.com/AdrBog/MiniCodeEditor
  */
 
 class MiniCodeEditor{
@@ -67,13 +62,13 @@ class MiniCodeEditor{
         .mini-code-editor-brown{color: brown;}
         .mini-code-editor-black{color: black;}
 
-        .mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: blue !important;}
-        .mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red !important;}
-        .mini-code-editor-green-imp, .mini-code-editor-green-imp *{color: green !important;}
-        .mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange !important;}
-        .mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: purple !important;}
-        .mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: brown !important;}
-        .mini-code-editor-black-imp, .mini-code-editor-black-imp *{color: black !important;}
+        .mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: blue;}
+        .mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red;}
+        .mini-code-editor-green-imp, .mini-code-editor-green-imp *{color: green;}
+        .mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange;}
+        .mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: purple;}
+        .mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: brown;}
+        .mini-code-editor-black-imp, .mini-code-editor-black-imp *{color: black;}
 
         *{
             box-sizing: border-box;
