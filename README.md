@@ -49,6 +49,7 @@ Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
 <img width="500px" src="res/1.gif">
 
 ## Supported languages
+- CSS
 - HTML (consequently XML)
 - Javascript
 - Python
@@ -111,6 +112,7 @@ Pulsa <kbd>F1</kbd> dentro del editor de código para ver una lista de las palab
 <img width="500px" src="res/1.gif">
 
 ## Lenguajes soportados
+- CSS
 - HTML (en consecuencia XML)
 - Javascript
 - Python

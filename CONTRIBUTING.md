@@ -35,6 +35,7 @@ List of available colors:
 .mini-code-editor-orange{color: orange;}
 .mini-code-editor-purple{color: purple;}
 .mini-code-editor-brown{color: brown;}
+.mini-code-editor-black{color: black;}
 
 .mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: blue !important;}
 .mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red !important;}
@@ -42,6 +43,7 @@ List of available colors:
 .mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange !important;}
 .mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: purple !important;}
 .mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: brown !important;}
+.mini-code-editor-black-imp, .mini-code-editor-black-imp *{color: black !important;}
 ```
 
 ### IMPORTANT !!!!!!!!!!!

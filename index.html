@@ -17,7 +17,8 @@
         <section>
             <label for="highlight-rules">Set rules:</label>
             <select name="highlight-rules" id="highlight-rules" onchange="changeRules(this.value)">
-                <option value="Javascript">Javascript</option>
+                <option value="CSS">CSS</option>
+                <option value="Javascript" selected>Javascript</option>
                 <option value="HTML">HTML</option>
                 <option value="Python">Python</option>
                 <option value="SQLite">SQLite</option>
@@ -78,6 +79,7 @@
     </footer>
 
     <script src="src/editor.js"></script>
+    <script src="languages/css.js"></script>
     <script src="languages/js.js"></script>
     <script src="languages/html.js"></script>
     <script src="languages/sqlite.js"></script>
@@ -107,6 +109,9 @@
         const CODE_EDITOR = new MiniCodeEditor(".code-editor")
         function changeRules(rules){
             switch (rules) {
+                case "CSS":
+                    CODE_EDITOR.setRules(CSS_RULES)
+                    break;
                 case "HTML":
                     CODE_EDITOR.setRules(HTML_RULES)
                     break;
