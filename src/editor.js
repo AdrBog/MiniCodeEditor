@@ -19,6 +19,7 @@ class MiniCodeEditor{
     #DEFAULT_TEXT
     #HISTORY_SIZE = 512
     #HISTORY = new Array(this.#HISTORY_SIZE)
+    fontSize = 12
 
     #codeEditor;
     #codeEditorBackdrop;
@@ -34,6 +35,7 @@ class MiniCodeEditor{
         }
         this.#generateCodeEditor()
         this.#addEventsListeners()
+        this.setFontSize(this.fontSize)
         this.setValue(this.#DEFAULT_TEXT)
     }
 
@@ -92,7 +94,6 @@ class MiniCodeEditor{
 
         .mini-code-editor-text{
             font-family: monospace;
-            font-size: 12px;
             line-height: 1;
         }
 
@@ -195,6 +196,14 @@ class MiniCodeEditor{
             } else if (e.key === 'F1'){
                 e.preventDefault()
                 alert(`List of shortcuts:\n${this.#RULES["shortcuts"].map((x) => x["keyword"]).join(", ")}`)
+            } else if (e.ctrlKey && e.key === '+') {
+                e.preventDefault()
+                this.setFontSize(this.fontSize + 2)
+                this.#undo()
+            } else if (e.ctrlKey && e.key === '-') {
+                e.preventDefault()
+                this.setFontSize(this.fontSize - 2)
+                this.#undo()
             }
             this.#handleInput()
         })
@@ -307,6 +316,12 @@ class MiniCodeEditor{
         textarea.value = startText + endText
         textarea.selectionStart = position
         textarea.selectionEnd = position
+    }
+
+    setFontSize(size){
+        this.fontSize = size
+        this.#codeEditorTextarea.style.fontSize = this.fontSize + "px";
+        this.#codeEditorHighlight.style.fontSize = this.fontSize + "px";
     }
 
     getValue(){

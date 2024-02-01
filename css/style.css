@@ -27,13 +27,6 @@ section{
     width: 100% !important;
     height: 300px !important;
 }
-.mini-code-editor-text{
-    font-size: 24px !important;
-}
-
-.sample-code .mini-code-editor-text{
-    font-size: 18px !important;
-}
 
 .sample-code .mini-code-editor{
     height: 128px !important;

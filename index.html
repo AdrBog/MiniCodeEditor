@@ -27,6 +27,8 @@
             </select>
             <label for="word-wrap">Word Wrap:</label>
             <input type="checkbox" name="word-wrap" id="word-wrap" onchange="CODE_EDITOR.setWordWrap(this.checked)">
+            <button type="button" onclick="CODE_EDITOR.setFontSize(CODE_EDITOR.fontSize + 2)" title="You can also prees Ctrl +">Font +</button>
+            <button type="button" onclick="CODE_EDITOR.setFontSize(CODE_EDITOR.fontSize - 2)" title="You can also prees Ctrl -">Font -</button>
         </section>
         <hr>
         <section>
@@ -48,7 +50,7 @@
                         Configure your text editor in no time.
                     </p>
                     <p>
-                        Here you have all the possible options: setReadOnly(), setWordWrap(), setValue(), appendValue(), getValue() and setRules()
+                        Here you have all the possible options: setReadOnly(), setFontSize(), setWordWrap(), setValue(), appendValue(), getValue() and setRules()
                     </p>
                 </div>
                 <div>
@@ -93,6 +95,7 @@
             x.setRules(HTML_RULES)
             x.setWordWrap(true)
             x.setReadOnly(true)
+            x.setFontSize(18)
             x.setValue("<div id='editor'></div>\n")
             x.appendValue("<script src='src/editor.js'></scr" + "ipt>\n")
             x.appendValue("<script src='languages/html.js'></scr" + "ipt>\n")
@@ -106,7 +109,8 @@
             x.setRules(JS_RULES)
             x.setWordWrap(true)
             x.setReadOnly(true)
-            x.setValue("EDITOR.setRules(HTML_RULES)\nEDITOR.setWordWrap(false)\nEDITOR.setReadOnly(true)\nEDITOR.setValue('Hello world')")
+            x.setFontSize(18)
+            x.setValue("EDITOR.setRules(HTML_RULES)\nEDITOR.setFontSize(18)\nEDITOR.setWordWrap(false)\nEDITOR.setReadOnly(true)\nEDITOR.setValue('Hello world')")
         }
 
         const CODE_EDITOR = new MiniCodeEditor(".code-editor")
@@ -133,6 +137,7 @@
         }
         changeRules(document.querySelector("select").value)
         CODE_EDITOR.setWordWrap(this.checked)
+        CODE_EDITOR.setFontSize(24)
 
         setup()
         setup2()

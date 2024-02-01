@@ -47,6 +47,7 @@ More coming soon...
 	// Some configuration (optional)
 	EDITOR.setWordWrap(false)
 	EDITOR.setReadOnly(false)
+	EDITOR.setFontSize(24)
 	// Set editor text
 	EDITOR.setValue('Hello world')
 	// Get editor text
@@ -76,7 +77,6 @@ Here is an example of a dark theme
     color: white !important;
 }
 .mini-code-editor-text{
-    font-size: 24px !important;
     caret-color: white !important;
 }
 
