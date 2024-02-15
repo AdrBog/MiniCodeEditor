@@ -21,6 +21,7 @@ My goal is to create a code editor that is easy to import, easy to configure and
 Works on (Tested on): Firefox, Chrome, Badwolf and Pale Moon.
 
 ## Supported languages
+- C
 - CSS
 - HTML (consequently XML)
 - Javascript

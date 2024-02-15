@@ -1,4 +1,4 @@
-const JS_RULES = {
+const C_RULES = {
     "highlights": [
         {
             "regex": "&",
@@ -20,37 +20,44 @@ const JS_RULES = {
             "regex": /("(.*?)"|'(.*?)')/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
         },
+        {
+            "regex": /&lt;(.*?)&gt;/gm,
+            "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
+        },
         {   // Comments
             "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/,
             "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
+        },
+        {
+            "regex": /(?:\#.*)/gm,
+            "replaceTo": "<SPAN CLASS='mini-code-editor-purple'>$&</SPAN>"
         },
         {   // Functions
             "regex": /([a-zA-Z_{1}][a-zA-Z0-9_]+)(?= *\()/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {   // Every type of number
-            // https://stackoverflow.com/questions/2811031/decimal-or-numeric-values-in-regular-expression-validation
             "regex": /\b((?!-0?(\.0+)?(e|$))-?(0|[1-9]\d*)?(\.\d+)?(?<=\d)(e-?(0|[1-9]\d*))?|0x[0-9a-f]+)\b/g,
             "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
-            "regex": /\b(NaN|undefined|null)\b/g,
+            "regex": /\b(char|int|short|long|double|float|void)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(function|return)\b/g,
+            "regex": /\b(unsigned|signed)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(async|await|then)\b/g,
+            "regex": /\b(register|static|extern)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(try|catch|throw|finally)\b/g,
+            "regex": /\b(do|while|for|break|continue)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(class|this|constructor|extends|super|static)\b/g,
+            "regex": /\b(return)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
@@ -58,16 +65,16 @@ const JS_RULES = {
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(do|while|for|of|in|until|break|continue)\b/g,
+            "regex": /\b(goto)\b/g,
             "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(let|const|new|var|typeof)\b/g,
-            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
+            "regex": /\b(struct)\b/g,
+            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
-            "regex": /\b(true|false)\b/g,
-            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
+            "regex": /\b(enum)\b/g,
+            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
         },
         {
             "regex": /\n$/g,
@@ -79,36 +86,24 @@ const JS_RULES = {
         "\"": "\"",
         "'": "'",
         "{": "}",
-        "`": "`",
         "[": "]"
     },
     "backspace_pairs": ["\"\"", "''", "()", "{}", "[]"],
-    "newline_pairs": ["()", "{}", "[]","``"],
+    "newline_pairs": ["()", "{}", "[]"],
     "shortcuts":[
         {
-            "keyword": "afun",
-            "left": "async function ",
-            "right": "()\n{\n\t\n}"
+            "keyword": "def",
+            "left": "#define "
         },
         {
-            "keyword": "ca",
-            "left": "case ",
-            "right": ":\n\t\n\tbreak;"
+            "keyword": "enum",
+            "left": "enum ",
+            "right": " {\n\t\n};"
         },
         {
-            "keyword": "cl",
-            "left": "console.log(\"",
-            "right": "\")"
-        },
-        {
-            "keyword": "cls",
-            "left": "class ",
-            "right": "\n{\n\t\n}"
-        },
-        {
-            "keyword": "con",
-            "left": "constructor()\n{\n\t",
-            "right": "\n}"
+            "keyword": "main",
+            "left": "#include <stdio.h>\n\nint main(int argc, char *argv[])\n{\n\t",
+            "right": "\n\treturn 0;\n}"
         },
         {
             "keyword": "if",
@@ -126,19 +121,23 @@ const JS_RULES = {
             "right": ") {\n\t\n} else if () {\n\t\n} else {\n\t\n}"
         },
         {
+            "keyword": "inc",
+            "left": "#include "
+        },
+        {
             "keyword": "for",
             "left": "for (int i = 0; i <= 10; i++) {\n\t",
             "right": "\n}"
         },
         {
-            "keyword": "fun",
-            "left": "function ",
-            "right": "()\n{\n\t\n}"
+            "keyword": "pf",
+            "left": "printf(\"",
+            "right": "\\n\");"
         },
         {
-            "keyword": "getid",
-            "left": "document.getElementById(\"",
-            "right": "\")"
+            "keyword": "struct",
+            "left": "struct ",
+            "right": " {\n\t\n};"
         },
         {
             "keyword": "sw",
