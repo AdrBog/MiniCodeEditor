@@ -26,6 +26,7 @@ Works on (Tested on): Firefox, Chrome, Badwolf and Pale Moon.
 - HTML (consequently XML)
 - Javascript
 - Python
+- Shell
 - SQLite
 
 More coming soon...

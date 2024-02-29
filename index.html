@@ -24,6 +24,7 @@
                 <option value="Javascript" selected>Javascript</option>
                 <option value="HTML">HTML</option>
                 <option value="Python">Python</option>
+                <option value="Shell">Shell</option>
                 <option value="SQLite">SQLite</option>
             </select>
             <label for="word-wrap">Word Wrap:</label>
@@ -60,12 +61,12 @@
             </article>
             <article>
                 <div>
-                    <h1>Code fast</h1>
+                    <h1>Code fast with snippets</h1>
                     <p>
                         Write the keyword and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to instantly generate the code block.
                     </p>
                     <p>
-                        Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
+                        Press <kbd>F1</kbd> inside the code editor to view a list of current snippets
                     </p>
                 </div>
                 <div>
@@ -89,6 +90,7 @@
     <script src="languages/css.js"></script>
     <script src="languages/js.js"></script>
     <script src="languages/html.js"></script>
+    <script src="languages/shell.js"></script>
     <script src="languages/sqlite.js"></script>
     <script src="languages/python.js"></script>
     <script>
@@ -132,6 +134,9 @@
                     break;
                 case "Python":
                     CODE_EDITOR.setRules(PYTHON_RULES)
+                    break;
+                case "Shell":
+                    CODE_EDITOR.setRules(SHELL_RULES)
                     break;
                 case "SQLite":
                     CODE_EDITOR.setRules(SQLITE_RULES)
