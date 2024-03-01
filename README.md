@@ -1,9 +1,9 @@
-<div align="center">
-	<img src="res/2.png">
-</div>
-
 # Mini Code Editor
 ### Simple and free code editor for your web applications
+
+<div align="center">
+	<img src="res/2.gif">
+</div>
 
 <a href="https://adrbog.github.io/MiniCodeEditor/" target="_blank">Demo</a>
 
@@ -11,7 +11,7 @@
 - [About Mini Code Editor](#about-mini-code-editor)
 - [Supported languages](#supported-languages)
 - [Setup](#setup)
-- [Code fast](#code-fast)
+- [Code fast with snippets](#code-fast-with-snippets)
 - [Theming](#theming)
 - [Support this project](#support-this-project)
 - [License](#license)
@@ -57,12 +57,12 @@ More coming soon...
 </script>
 ```
 
-## Code fast
+## Code fast with snippets
 
 Write the keyword and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to instantly generate the code block.
 
 
-Press <kbd>F1</kbd> inside the code editor to view a list of current keywords
+Press <kbd>F1</kbd> inside the code editor to view a list of current snippets
 
 
 <img width="500px" src="res/1.gif">
@@ -72,31 +72,24 @@ Mini Code Editor color theme is edited using CSS:
 
 Here is an example of a dark theme
 ```css
-.mini-code-editor{
-    width: 100% !important;
-    height: 300px !important;
-    background-color: black !important;
-    color: white !important;
+body[theme="dracula"] {
+    --mce-color-blue: #8be9fd;
+    --mce-color-red: #ff5555;
+    --mce-color-green: #50fa7b;
+    --mce-color-orange: #ffb86c;
+    --mce-color-purple: #bd93f9;
+    --mce-color-brown: #f1fa8c;
+    --mce-color-black: #282a36;
+    --mce-color-white: #f8f8f2;
+    --mce-color-bg: #282a36;
+    --mce-color-fg: #f8f8f2;
+    --mce-color-caret: #f8f8f2;
+    --mce-color-select: rgba(153, 153, 255, 0.5);
+    --mce-editor-font: 'Jetbrains Mono', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #f8f8f2;
+    --mce-editor-border-focus:  #f8f8f2 0px 1px 4px, #f8f8f2 0px 0px 0px 3px;
 }
-.mini-code-editor-text{
-    caret-color: white !important;
-}
-
-.mini-code-editor-blue{color: cornflowerblue !important;}
-.mini-code-editor-red{color: red !important;}
-.mini-code-editor-green{color: greenyellow !important;}
-.mini-code-editor-orange{color: orange !important;}
-.mini-code-editor-purple{color: darkorchid !important;}
-.mini-code-editor-brown{color: chocolate !important;}
-.mini-code-editor-black{color: white !important;}
-
-.mini-code-editor-blue-imp, .mini-code-editor-blue-imp *{color: cornflowerblue !important;}
-.mini-code-editor-red-imp, .mini-code-editor-red-imp *{color: red !important;}
-.mini-code-editor-green-imp, .mini-code-editor-green-imp *{color: greenyellow !important;}
-.mini-code-editor-orange-imp, .mini-code-editor-orange-imp *{color: orange !important;}
-.mini-code-editor-purple-imp, .mini-code-editor-purple-imp *{color: darkorchid !important;}
-.mini-code-editor-brown-imp, .mini-code-editor-brown-imp *{color: chocolate !important;}
-.mini-code-editor-black-imp, .mini-code-editor-black-imp *{color: white !important;}
 ```
 
 ## Support this Project

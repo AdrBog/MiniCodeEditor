@@ -42,39 +42,39 @@ const C_RULES = {
         },
         {
             "regex": /\b(char|int|short|long|double|float|void)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(unsigned|signed)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(register|static|extern)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(do|while|for|break|continue)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(return)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(if|else|switch|case|default)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(goto)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(struct)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(enum)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\n$/g,

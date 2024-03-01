@@ -46,47 +46,47 @@ const PYTHON_RULES = {
         },
         {
             "regex": /\b(def|return)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(if|elif|else)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(try|except|finally|raise)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {   // Data types
             "regex": /\b(str|int|float|complex|list|tuple|range|dict|set|frozenset|bool|bytes|bytearray|memoryview|None)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(global)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(for|in|while|pass|break|continue)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(class|self)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(lambda)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(del)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(from|import|as)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(True|False)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\n$/g,

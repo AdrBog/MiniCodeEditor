@@ -71,6 +71,36 @@ const HTML_RULES = {
             "right": "\n</form>"
         },
         {
+            "keyword": "h1",
+            "left": "<h1>",
+            "right": "</h1>"
+        },
+        {
+            "keyword": "h2",
+            "left": "<h2>",
+            "right": "</h2>"
+        },
+        {
+            "keyword": "h3",
+            "left": "<h3>",
+            "right": "</h3>"
+        },
+        {
+            "keyword": "h4",
+            "left": "<h4>",
+            "right": "</h4>"
+        },
+        {
+            "keyword": "h5",
+            "left": "<h5>",
+            "right": "</h5>"
+        },
+        {
+            "keyword": "h6",
+            "left": "<h6>",
+            "right": "</h6>"
+        },
+        {
             "keyword": "html",
             "left": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Document</title>\n\t</head>\n\t<body>\n\t\t",
             "right": "\n\t</body>\n</html>"

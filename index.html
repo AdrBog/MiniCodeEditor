@@ -9,7 +9,7 @@
     <meta name="keywords" content="javascript, html, lightweight, code editor, text editor, mini code editor, web app, free code editor">
     <meta name="description" content="Mini Code Editor is simple and free code editor for your web applications">
 </head>
-<body>
+<body class="dracula">
     <header>
         <h1>Mini Code Editor</h1>
         <p>Simple and free code editor for your web applications</p>
@@ -31,6 +31,17 @@
             <input type="checkbox" name="word-wrap" id="word-wrap" onchange="CODE_EDITOR.setWordWrap(this.checked)">
             <button type="button" onclick="CODE_EDITOR.setFontSize(CODE_EDITOR.fontSize + 2)" title="You can also prees Ctrl +">Font +</button>
             <button type="button" onclick="CODE_EDITOR.setFontSize(CODE_EDITOR.fontSize - 2)" title="You can also prees Ctrl -">Font -</button>
+        </section>
+        <section>
+        	<label for="theme">Theme:</label>
+            <select name="theme" id="theme" onchange="document.body.setAttribute('theme', this.value)">
+                <option value="">No theme (LIGHT THEME WARNING)</option>
+                <option value="dracula" selected>Dracula</option>
+                <option value="gruvboxdark">Gruvbox Dark</option>
+                <option value="githubdark">Github Dark</option>
+                <option value="onedark">Onedark</option>
+                <option value="solarizeddark">Solarized Dark</option>
+            </select>
         </section>
         <hr>
         <section>
@@ -99,7 +110,7 @@
             x.setRules(HTML_RULES)
             x.setWordWrap(true)
             x.setReadOnly(true)
-            x.setFontSize(18)
+            x.setFontSize(14)
             x.setValue("<div id='editor'></div>\n")
             x.appendValue("<script src='src/editor.js'></scr" + "ipt>\n")
             x.appendValue("<script src='languages/html.js'></scr" + "ipt>\n")
@@ -113,7 +124,7 @@
             x.setRules(JS_RULES)
             x.setWordWrap(true)
             x.setReadOnly(true)
-            x.setFontSize(18)
+            x.setFontSize(14)
             x.setValue("EDITOR.setRules(HTML_RULES)\nEDITOR.setFontSize(18)\nEDITOR.setWordWrap(false)\nEDITOR.setReadOnly(true)\nEDITOR.setValue('Hello world')")
         }
 
@@ -145,9 +156,12 @@
                     break;
             }
         }
+        
         changeRules(document.querySelector("select").value)
         CODE_EDITOR.setWordWrap(this.checked)
-        CODE_EDITOR.setFontSize(24)
+        CODE_EDITOR.setFontSize(20)
+
+        document.body.setAttribute('theme', document.querySelector("#theme").value)
 
         setup()
         setup2()

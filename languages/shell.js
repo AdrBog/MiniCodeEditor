@@ -18,31 +18,31 @@ const SHELL_RULES = {
         },
         {   // Text between quotation marks
             "regex": /("(.*?)"|'(.*?)')/gm,
-            "replaceTo": "<font class='mini-code-editor-green-imp'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {   // Comments
             "regex": /(?:\#.*)/gm,
-            "replaceTo": "<font class='mini-code-editor-brown-imp'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-brown-imp'>$&</SPAN>"
         },
         {   // Variables declaration
             "regex": /([a-zA-Z_$][a-zA-Z_$0-9]*(?=&equals;))/g,
-            "replaceTo": "<span CLASS='mini-code-editor-red'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
             "regex": /(\$[a-zA-Z_$][a-zA-Z_$0-9]*)/g,
-            "replaceTo": "<b CLASS='mini-code-editor-red'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
             "regex": /(\$\(.*\))/g,
-            "replaceTo": "<b CLASS='mini-code-editor-red'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
             "regex": /(`.*`)/g,
-            "replaceTo": "<b CLASS='mini-code-editor-red'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
             "regex": /(\$\{.*\})/g,
-            "replaceTo": "<b CLASS='mini-code-editor-red'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
             "regex": /([a-zA-Z_{1}][a-zA-Z0-9_]+)(?= *\()/gm,
@@ -50,31 +50,31 @@ const SHELL_RULES = {
         },
         {
             "regex": /\b(for|do|done)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(while|until)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(continue|break)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(select)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(function)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(case|in|esac)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(if|elif|else|then|fi)\b/g,
-            "replaceTo": "<span CLASS='mini-code-editor-blue'>$&</span>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\n$/g,

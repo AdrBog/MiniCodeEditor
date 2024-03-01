@@ -18,91 +18,91 @@ const SQLITE_RULES = {
         },
         {   // Text between quotation marks
             "regex": /("(.*?)"|'(.*?)')/gm,
-            "replaceTo": "<font class='mini-code-editor-green-imp'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {   // Comments
             "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\-\-.*))/,
-            "replaceTo": "<font class='mini-code-editor-red-imp'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-red-imp'>$&</SPAN>"
         },
         {   // idk why the i flag doesn't work :(
             "regex": /\b(add|ADD)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(alter|ALTER)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(autoincrement|AUTOINCREMENT)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(create|CREATE)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(column|COLUMN)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(drop|DROP)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(foreign|FOREIGN)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(from|FROM)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(insert|INSERT)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(into|INTO)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(key|KEY)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(not|NOT)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(null|NULL)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(primary|PRIMARY)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(references|REFERENCES)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(rename|RENAME)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(select|SELECT)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(table|TABLE)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(to|TO)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(values|VALUES)\b/ig,
-            "replaceTo": "<font class='mini-code-editor-blue'>$&</font>"
+            "replaceTo": "<SPAN class='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\n$/g,

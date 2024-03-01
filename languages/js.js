@@ -17,7 +17,7 @@ const JS_RULES = {
             "replaceTo": "&equals;"
         },
         {   // Text between quotation marks
-            "regex": /("(.*?)"|'(.*?)')/gm,
+            "regex": /("(.*?)"|'(.*?)'|`(.*?)`)/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
         },
         {   // Comments
@@ -35,31 +35,31 @@ const JS_RULES = {
         },
         {
             "regex": /\b(NaN|undefined|null)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(function|return)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(async|await|then)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(try|catch|throw|finally)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(class|this|constructor|extends|super|static)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(if|else|switch|case|default)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(do|while|for|of|in|until|break|continue)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</b>"
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
             "regex": /\b(let|const|new|var|typeof)\b/g,

@@ -4,15 +4,124 @@
     }
 }
 
+@font-face {
+    font-family: "JetBrains";
+    src: url("../fonts/JetBrainsMonoNLNerdFont-Regular.ttf");
+}
+
+body[theme="dracula"]{
+    --mce-color-blue: #8be9fd;
+    --mce-color-red: #ff5555;
+    --mce-color-green: #50fa7b;
+    --mce-color-orange: #ffb86c;
+    --mce-color-purple: #bd93f9;
+    --mce-color-brown: #f1fa8c;
+    --mce-color-black: #282a36;
+    --mce-color-white: #f8f8f2;
+    --mce-color-bg: #282a36;
+    --mce-color-fg: #f8f8f2;
+    --mce-color-caret: #f8f8f2;
+    --mce-color-select: rgba(153, 153, 255, 0.5);
+    --mce-editor-font: 'JetBrains', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #f8f8f2;
+    --mce-editor-border-focus:  #f8f8f2 0px 1px 4px, #f8f8f2 0px 0px 0px 3px;
+}
+
+body[theme="gruvboxdark"]{
+    --mce-color-blue: #83a598;
+    --mce-color-red: #fb4934;
+    --mce-color-green: #b8bb26;
+    --mce-color-orange: #fabd2f;
+    --mce-color-purple: #d3869b;
+    --mce-color-brown: #fe8019;
+    --mce-color-black: #282828;
+    --mce-color-white: #ebdbb2;
+    --mce-color-bg: #282828;
+    --mce-color-fg: #ebdbb2;
+    --mce-color-caret: #ebdbb2;
+    --mce-color-select: rgba(92, 85, 70, 0.5);
+    --mce-editor-font: 'JetBrains', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #ebdbb2;
+    --mce-editor-border-focus:  #ebdbb2 0px 1px 4px, #ebdbb2 0px 0px 0px 3px;
+}
+
+body[theme="githubdark"]{
+    --mce-color-blue: #77bdfb;
+    --mce-color-red: #fa7970;
+    --mce-color-green: #7ce38b;
+    --mce-color-orange: #faa367;
+    --mce-color-purple: #cea5fb;
+    --mce-color-brown: #faa367;
+    --mce-color-black: #0d1117;
+    --mce-color-white: #ecf2f8;
+    --mce-color-bg: #0d1117;
+    --mce-color-fg: #ecf2f8;
+    --mce-color-caret: #ecf2f8;
+    --mce-color-select: rgba(236, 242, 248, 0.2);
+    --mce-editor-font: 'JetBrains', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #ecf2f8;
+    --mce-editor-border-focus:  #ecf2f8 0px 1px 4px, #ecf2f8 0px 0px 0px 3px;
+}
+
+body[theme="onedark"]{
+    --mce-color-blue: #61afef;
+    --mce-color-red: #e06c75;
+    --mce-color-green: #98c379;
+    --mce-color-orange: #e5c07b;
+    --mce-color-purple: #c678dd;
+    --mce-color-brown: #56b6c2;
+    --mce-color-black: #282c34;
+    --mce-color-white: #abb2bf;
+    --mce-color-bg: #282c34;
+    --mce-color-fg: #abb2bf;
+    --mce-color-caret: #abb2bf;
+    --mce-color-select: rgba(236, 242, 248, 0.2);
+    --mce-editor-font: 'JetBrains', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #abb2bf;
+    --mce-editor-border-focus:  #abb2bf 0px 1px 4px, #abb2bf 0px 0px 0px 3px;
+}
+
+body[theme="solarizeddark"]{
+    --mce-color-blue: #268bd2;
+    --mce-color-red: #dc322f;
+    --mce-color-green: #859900;
+    --mce-color-orange: #b58900;
+    --mce-color-purple: #6c71c4;
+    --mce-color-brown: #cb4b16;
+    --mce-color-black: #002b36;
+    --mce-color-white: #eee8d5;
+    --mce-color-bg: #002b36;
+    --mce-color-fg: #eee8d5;
+    --mce-color-caret: #eee8d5;
+    --mce-color-select: rgba(236, 242, 248, 0.2);
+    --mce-editor-font: 'JetBrains', monospace;
+    --mce-editor-line-height: 1.32;
+    --mce-editor-border: 2px groove #eee8d5;
+    --mce-editor-border-focus:  #eee8d5 0px 1px 4px, #eee8d5 0px 0px 0px 3px;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eee;
-    color: #444;
+    background-color: #282a36;
+    color: #f8f8f2;
     margin: 40px auto;
     max-width: 1000px;
     font-size: 18px;
     padding: 0 10px;
-    line-height: 1.4;
+    line-height: 1.2;
+}
+button, input, select{
+    background-color: #282a36;
+    color: #f8f8f2;
+    border: 2px groove #f8f8f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    color: var(--mce-color-blue);
 }
 nav a{
     padding: 8px;
@@ -25,7 +134,7 @@ section{
 }
 .mini-code-editor{
     width: 100% !important;
-    height: 300px !important;
+    height: 450px !important;
 }
 
 .sample-code .mini-code-editor{
