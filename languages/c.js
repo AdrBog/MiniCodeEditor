@@ -1,19 +1,19 @@
 const C_RULES = {
     "highlights": [
         {
-            "regex": "&",
+            "regex": /\&/g,
             "replaceTo": "&amp;"
         },
         {
-            "regex": "<",
+            "regex": /\</g,
             "replaceTo": "&lt;"
         },
         {
-            "regex": ">",
+            "regex": /\>/g,
             "replaceTo": "&gt;"
         },
         {
-            "regex": "=",
+            "regex": /\=/g,
             "replaceTo": "&equals;"
         },
         {   // Text between quotation marks
@@ -25,7 +25,7 @@ const C_RULES = {
             "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
         },
         {   // Comments
-            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/,
+            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {

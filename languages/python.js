@@ -1,27 +1,27 @@
 const PYTHON_RULES = {
     "highlights": [
         {
-            "regex": "&",
+            "regex": /\&/g,
             "replaceTo": "&amp;"
         },
         {
-            "regex": "<",
+            "regex": /\</g,
             "replaceTo": "&lt;"
         },
         {
-            "regex": ">",
+            "regex": /\>/g,
             "replaceTo": "&gt;"
         },
         {
-            "regex": "=",
+            "regex": /\=/g,
             "replaceTo": "&equals;"
         },
         {
-            "regex": "\"",
+            "regex": /\"/g,
             "replaceTo": "&quot;"
         },
         {
-            "regex": "\'",
+            "regex": /\'/g,
             "replaceTo": "&apos;"
         },
         {   // Comments
@@ -45,15 +45,15 @@ const PYTHON_RULES = {
             "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {
-            "regex": /\b(def|return)\b/g,
-            "replaceTo": "<b CLASS='mini-code-editor-blue'>$&</SPAN>"
-        },
-        {
-            "regex": /\b(if|elif|else)\b/g,
+            "regex": /\b(def|return)\b/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {
-            "regex": /\b(try|except|finally|raise)\b/g,
+            "regex": /\b(if|elif|else)\b/gm,
+            "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
+        },
+        {
+            "regex": /\b(try|except|finally|raise)\b/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-blue'>$&</SPAN>"
         },
         {   // Data types

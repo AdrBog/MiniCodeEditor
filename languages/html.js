@@ -1,19 +1,19 @@
 const HTML_RULES = {
     "highlights": [
         {
-            "regex": "&",
+            "regex": /\&/g,
             "replaceTo": "&amp;"
         },
         {
-            "regex": "<",
+            "regex": /\</g,
             "replaceTo": "&lt;"
         },
         {
-            "regex": ">",
+            "regex": /\>/g,
             "replaceTo": "&gt;"
         },
         {
-            "regex": "=",
+            "regex": /\=/g,
             "replaceTo": "&equals;"
         },
         {   // Text between quotation marks

@@ -1,19 +1,19 @@
 const JS_RULES = {
     "highlights": [
         {
-            "regex": "&",
+            "regex": /\&/g,
             "replaceTo": "&amp;"
         },
         {
-            "regex": "<",
+            "regex": /\</g,
             "replaceTo": "&lt;"
         },
         {
-            "regex": ">",
+            "regex": /\>/g,
             "replaceTo": "&gt;"
         },
         {
-            "regex": "=",
+            "regex": /\=/g,
             "replaceTo": "&equals;"
         },
         {   // Text between quotation marks
@@ -21,7 +21,7 @@ const JS_RULES = {
             "replaceTo": "<SPAN CLASS='mini-code-editor-brown-imp'>$&</SPAN>"
         },
         {   // Comments
-            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/,
+            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:\/\/.*))/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {   // Functions
@@ -30,7 +30,7 @@ const JS_RULES = {
         },
         {   // Every type of number
             // https://stackoverflow.com/questions/2811031/decimal-or-numeric-values-in-regular-expression-validation
-            "regex": /\b((?!-0?(\.0+)?(e|$))-?(0|[1-9]\d*)?(\.\d+)?(?<=\d)(e-?(0|[1-9]\d*))?|0x[0-9a-f]+)\b/g,
+            "regex": /\b((?!-0?(\.0+)?(e|$))-?(0|[1-9]\d*)?(\.\d+)?(?<=\d)(e-?(0|[1-9]\d*))?|0x[0-9a-f]+)\b/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {

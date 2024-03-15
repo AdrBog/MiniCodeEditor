@@ -1,11 +1,11 @@
 const CSS_RULES = {
     "highlights": [
         {
-            "regex": ";",
+            "regex": /;/g,
             "replaceTo": "&semi;"
         },
         {
-            "regex": ":",
+            "regex": /:/g,
             "replaceTo": "&colon;"
         },
         {
@@ -13,19 +13,19 @@ const CSS_RULES = {
             "replaceTo": "&amp;"
         },
         {
-            "regex": "<",
+            "regex": /\</g,
             "replaceTo": "&lt;"
         },
         {
-            "regex": ">",
+            "regex": /\>/g,
             "replaceTo": "&gt;"
         },
         {
-            "regex": "=",
+            "regex": /\=/g,
             "replaceTo": "&equals;"
         },
         {   // Comments
-            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/,
+            "regex": /((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-green-imp'>$&</SPAN>"
         },
         {   // Value
@@ -37,7 +37,7 @@ const CSS_RULES = {
             "replaceTo": "<SPAN CLASS='mini-code-editor-red'>$&</SPAN>"
         },
         {   // Selector
-            "regex": /(\s|^)(.*?)\s*(?={)/g,
+            "regex": /(\s|^)(.*?)\s*(?={)/gm,
             "replaceTo": "<SPAN CLASS='mini-code-editor-brown'>$&</SPAN>"
         },
         {

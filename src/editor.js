@@ -6,7 +6,7 @@
  */
 
 class MiniCodeEditor{
-    #TEXTAREA_TABS_REGEX = /^\t*/g;
+    #TEXTAREA_TABS_REGEX = /^(\t| )*/g;
 
     #RULES = {
         "highlights": [],
@@ -246,10 +246,9 @@ class MiniCodeEditor{
     }
 
     #applyHighlights(text) {
-        for (const x of this.#RULES["highlights"]) {
-            text = text.replace(new RegExp(x["regex"], 'g'), x["replaceTo"])
-        }
-        return text
+        return this.#RULES["highlights"].reduce((x, { regex, replaceTo }) => {
+            return x.replace(regex, replaceTo)
+        }, text)
     }
     
     #handleInput() {
@@ -295,20 +294,19 @@ class MiniCodeEditor{
     }
 
     #getTabLevel(textarea){
-        return this.#getTextareaLine(textarea).match(this.#TEXTAREA_TABS_REGEX)
+        return this.getTextareaLine(textarea).match(this.#TEXTAREA_TABS_REGEX)
+    }
+
+    getLineNumber(textarea){
+        let i, line
+        for (i = line = 0; i < textarea.selectionStart; i++)
+            if (textarea.value[i] == "\n")
+                line++
+        return line
     }
     
-    #getTextareaLine(textarea) {
-        const lines = textarea.value.split("\n");
-        let selection = 0;
-        for (const line of lines) {
-            for (let index = 0; index <= line.length; index++) {
-                selection++;
-                if (selection >= textarea.selectionStart)
-                    return line;
-            }
-        }
-        return null;
+    getTextareaLine(textarea, lineStart = this.getLineNumber(textarea), lineEnd = lineStart) {
+        return textarea.value.split("\n").slice(lineStart, lineEnd + 1).join("\n")
     }
     
     #getTextareaCharacter(textarea, offset = 0, end = 1) {
